@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JOJO BIZARRE QUIZ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Efeito CRT -->
+    <div class="crt"></div>
+
+    <!-- Tela inicial -->
+    <main id="startScreen" class="screen active">
+
+        <div class="logo">
+            <span>JOJO'S</span>
+            <strong>BIZARRE</strong>
+            <em>QUIZ</em>
+        </div>
+
+        <div class="jojo-symbol">★</div>
+
+        <p class="subtitle">
+            TESTE SEU CONHECIMENTO<br>
+            SOBRE A SAGA JOJO
+        </p>
+
+        <div class="difficulty">
+            <button class="difficulty-btn selected" data-level="normal">
+                NORMAL
+            </button>
+
+            <button class="difficulty-btn" data-level="hard">
+                HARD
+            </button>
+
+            <button class="difficulty-btn" data-level="insane">
+                INSANO
+            </button>
+        </div>
+
+        <button id="startButton" class="arcade-button">
+            ▶ COMEÇAR
+        </button>
+
+        <p class="blink">
+            INSERT COIN ★
+        </p>
+
+    </main>
+
+
+    <!-- Tela do quiz -->
+    <main id="quizScreen" class="screen">
+
+        <header class="hud">
+
+            <div>
+                PLAYER 1
+            </div>
+
+            <div>
+                SCORE:
+                <span id="score">000000</span>
+            </div>
+
+            <div>
+                TIME:
+                <span id="timer">15</span>
+            </div>
+
+        </header>
+
+
+        <section class="quiz-container">
+
+            <div class="progress">
+
+                <span id="questionNumber">
+                    01
+                </span>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+                <span id="totalQuestions">
+                    10
+                </span>
+
+            </div>
+
+
+            <div class="question-box">
+
+                <p id="category">
+                    PART
+                </p>
+
+                <h1 id="question">
+                    Pergunta
+                </h1>
+
+            </div>
+
+
+            <div id="answers" class="answers">
+                <!-- Alternativas inseridas pelo JS -->
+            </div>
+
+
+            <div id="message" class="message"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Tela final -->
+    <main id="resultScreen" class="screen">
+
+        <div class="result-card">
+
+            <div class="result-title">
+                RESULTADO
+            </div>
+
+            <div class="rank">
+                <span id="rankLetter">S</span>
+            </div>
+
+            <p id="resultMessage">
+                Excelente!
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <span>ACERTOS</span>
+                    <strong id="correctAnswers">0</strong>
+                </div>
+
+                <div>
+                    <span>ERROS</span>
+                    <strong id="wrongAnswers">0</strong>
+                </div>
+
+                <div>
+                    <span>PONTOS</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+
+            </div>
+
+            <button id="restartButton" class="arcade-button">
+                ↻ JOGAR NOVAMENTE
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
